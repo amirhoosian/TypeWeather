@@ -3,3 +3,64 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Nunito", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #13131a;
+  display: flex;
+  gap: 11.75rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header_text {
+  width: 124.4px;
+  height: 18px;
+  margin-top: 47px;
+  font-size: 2rem;
+}
+
+.main_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+.main_container__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.main_container__header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fafafa;
+}
+
+.main_container__header h1 span {
+  color: #8fb2f5;
+}
+
+.main_container__header p {
+  font-size: 1.2rem;
+  color: #bfbfd4;
+}
+.form_container {
+  width: 31.5rem;
+}
+.form_container input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #bfbfd4;
+  border-radius: 4px;
+  background-color: #1e1e29;
+  color: #fafafa;
+
+  padding: 1.063rem 1.25rem;
+}

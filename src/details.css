@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--Base-Gray-900, #13131a);
+  color: #fafafa;
+}
+
+.weather-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100vh;
+}
+
+.dashboard-container {
+  background-color: red;
+  width: 664px;
+  height: 720px;
+  min-height: 550px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-details-container {
+  background: var(--Base-Gray-800, #16161f);
+  width: 632px;
+  height: 688px;
+  min-height: 550px;
+  max-height: 600px;
+}
+
+.search_bar {
+  width: 100%;
+  display: flex;
+}
+
+.search_bar input {
+  flex: 1;
+  background-color: #1e1e29;
+  padding: 1.5rem 1rem;
+  border: none;
+  outline: none;
+}
+
+.search_bar img {
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.dashboard-details-container {
+  background-image: url(../public/image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.city_tempare {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.city h1 {
+  font-size: 1.5rem;
+}
+
+.city p {
+  font-size: 0.8rem;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.time h3 {
+  font-size: 1.5rem;
+}
+
+.item p {
+  color: var(--Base-White, #fff);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.weather-details {
+  align-items: center;
+
+  padding: 0.8rem;
+}
+
+.weathe_details_item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.deatils_item h2 {
+  color: var(--Base-White, #fff);
+  font-size: 5rem;
+  font-weight: 600;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.deatils_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cercale {
+  width: 0.5rem;
+  height: 0.5rem;
+  fill: var(--Base-White, #fff);
+  opacity: 0.4;
+}
+
+.item {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.weather-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.title_temperature h2 {
+  color: var(--Base-Gray-400, #7f7f98);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+
+.temperature_card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--Base-Gray-800, #16161f);
+}
+
+.temperature_title_card {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.temperature_title_card p {
+  color: var(--Base-Gray-200, #bfbfd4);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.temperature_card .water_temperature h3 {
+  color: var(--Base-Gray-100, #fafafa);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 140%; /* 28px */
+}
+
+.status_details {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bottum_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title_status h2 {
+  color: var(--Base-Gray-400, #7f7f98);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.status_item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--Base-Gray-800, #16161f);
+}
+
+.status_item h3 {
+  color: var(--Base-Gray-200, #bfbfd4);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 140%;
+}
