@@ -1,3 +1,7 @@
+document.getElementById("get_data").addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 // Function to get weather data for a given city
 async function getWeather(city) {
   const apiKey = "ae942c67c292254abcaab4dfba8e304d"; // Replace with your OpenWeatherMap API key
@@ -22,14 +26,20 @@ const inputField = document.getElementById("get_city");
 
 inputField.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
-    const getCity = document.getElementById("get_city").value;
-    getWeather(getCity).then((data) => {
-      if (data) {
-        console.log(data);
-        // You can add code here to display weather data on the page
-      } else {
-        console.log("No weather data found");
-      }
-    });
+    event.preventDefault();
+    const getCity = inputField.value;
+    getWeather(getCity)
+      .then((data) => {
+        if (data) {
+          console.log(data);
+          localStorage.setItem("city", JSON.stringify(data));
+          window.location.href = "/details";
+        } else {
+          console.log("co data");
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   }
 });

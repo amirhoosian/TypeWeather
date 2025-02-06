@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/details.css" />
     <title>Weather Details</title>
+    <script src="./src/details.js"></script>
   </head>
-  <body>
+  <body onload="getData()">
     <div class="weather-dashboard">
       <div class="dashboard-container">
         <div class="search_bar">
@@ -16,18 +17,18 @@
         <div class="dashboard-details-container">
           <div class="city_tempare">
             <div class="city">
-              <h1>Porto Alegre, RS</h1>
-              <p>Segunda-feira, 15 de maio de 2023</p>
+              <h1 id="cityName">Segunda-feira</h1>
+              <p id="date">Segunda-feira, 15 de maio de 2023</p>
             </div>
-            <div class="time"><h3>20:00</h3></div>
+            <div id="timeZone" class="time"><h3>20:00</h3></div>
           </div>
           <div class="weather-details">
             <div class="details-container">
               <div class="weathe_details_item">
                 <div class="deatils_item">
-                  <h2>28ºc</h2>
+                  <h2 id="temperature">32ºc</h2>
                   <div class="item">
-                    <p>32ºc / 26ºc</p>
+                    <p id="temperatureRange">32ºc / 26ºc</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="8"
@@ -37,11 +38,15 @@
                     >
                       <circle opacity="0.4" cx="4" cy="4" r="4" fill="white" />
                     </svg>
-                    <p>Poucas nuvens</p>
+                    <p id="weatherDescription">Poucas nuvens</p>
                   </div>
                 </div>
                 <div class="weather_icon">
-                  <img src="./public/Icons_moon.svg" alt="whther" />
+                  <img
+                    src="./public/Icons_moon.svg"
+                    alt="whther"
+                    id="weatherIcon"
+                  />
                 </div>
               </div>
             </div>
@@ -70,7 +75,9 @@
               <p>Sensação térmica</p>
             </div>
 
-            <div class="water_temperature"><h3>26ºc</h3></div>
+            <div class="water_temperature">
+              <h3 id="feelsLikeTemperature">26ºc</h3>
+            </div>
           </div>
           <div class="temperature_card">
             <div class="temperature_title_card">
@@ -89,7 +96,7 @@
               <p>Probabilidade de chuva</p>
             </div>
 
-            <div class="water_temperature"><h3>0ºc</h3></div>
+            <div class="water_temperature"><h3 id="precipitation">0ºc</h3></div>
           </div>
 
           <div class="temperature_card">
@@ -109,7 +116,7 @@
               <p>Velocidade do vento</p>
             </div>
 
-            <div class="water_temperature"><h3>8 km/h</h3></div>
+            <div class="water_temperature"><h3 id="windSpeed">8 km/h</h3></div>
           </div>
           <div class="temperature_card">
             <div class="temperature_title_card">
@@ -128,7 +135,7 @@
               <p>Umidade do ar</p>
             </div>
 
-            <div class="water_temperature"><h3>40%</h3></div>
+            <div class="water_temperature"><h3 id="humidity">40%</h3></div>
           </div>
           <div class="temperature_card">
             <div class="temperature_title_card">
@@ -147,7 +154,7 @@
               <p>Índice UV</p>
             </div>
 
-            <div class="water_temperature"><h3>5</h3></div>
+            <div class="water_temperature"><h3 id="uvIndex">5</h3></div>
           </div>
         </div>
         <div class="bottum_container">
